@@ -21,4 +21,7 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     goals: 'package'
     
-
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'MyBuildArtifacts'
